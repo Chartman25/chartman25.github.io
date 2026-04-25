@@ -19,14 +19,43 @@
   </nav>
 
   <main>
-    <h1>Contact</h1>
+    <div class="contact-hero">
+      <div class="contact-intro">
+        <h1>Contact</h1>
+        <p class="subtitle" style="margin-bottom: 1rem;">Interested in collaborating on astrophysics research or have a question? Send a message below or reach out directly.</p>
+        <ul class="contact-list">
+          <li><span>Email</span> <a href="mailto:casey.hartman@etu.unige.ch">casey.hartman@etu.unige.ch</a></li>
+          <li><span>LinkedIn</span> <a href="https://linkedin.com/in/casey-hartman-tufts" target="_blank" rel="noopener">casey-hartman-tufts</a></li>
+          <li><span>GitHub</span> <a href="https://github.com/Chartman25" target="_blank" rel="noopener">Chartman25</a></li>
+          <li><span>Location</span> Genève, Switzerland</li>
+        </ul>
+      </div>
+    </div>
 
-    <ul class="contact-list">
-      <li><span>Email</span> <a href="mailto:casey.hartman@etu.unige.ch">casey.hartman@etu.unige.ch</a></li>
-      <li><span>LinkedIn</span> <a href="https://linkedin.com/in/casey-hartman-tufts" target="_blank" rel="noopener">casey-hartman-tufts</a></li>
-      <li><span>GitHub</span> <a href="https://github.com/Chartman25" target="_blank" rel="noopener">Chartman25</a></li>
-      <li><span>Location</span> Genève, Switzerland</li>
-    </ul>
+    <h2>Send a Message</h2>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, question, or idea." required></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
   </main>
 
 </body>
