@@ -202,12 +202,14 @@ a:hover {
 }
 
 .profile-photo {
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 10px;
   border: 1px solid var(--border);
   flex-shrink: 0;
+  align-self: center;
 }
 
 /* ── News / CV entries ── */
