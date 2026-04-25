@@ -110,6 +110,7 @@ h3 {
 p {
   margin-bottom: 1rem;
   color: var(--text);
+  text-align: justify;
 }
 
 a {
