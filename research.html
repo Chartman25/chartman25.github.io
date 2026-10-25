@@ -22,22 +22,25 @@
   <main>
     <h1>Research</h1>
     <p class="subtitle">
-      Exoplanet science, stellar astrophysics, galactic physics — from spectroscopic signatures
-      of stellar surfaces to planet formation in binary systems to unsupervised machine learning.
+      Exoplanet dynamics, stellar astrophysics, and galaxy evolution, from wide-orbit companions of
+      close-in Neptunes to tidally distorted stars to self-supervised learning on JWST spectra.
     </p>
 
     <h2>Current Projects</h2>
     <div class="project-list">
 
       <div class="project-card">
-        <h3>Masters Thesis - A GAIA search for companions behind exo-Neptunes migration</h3>
-        <div class="card-meta">Observatoire de Genève · Prof. Vincent Bourrier · Dr. Joao Faria · Jun. 2026 – Present</div>
+        <h3>Master's Thesis: Gaia Companions of Exo-Neptunes</h3>
+        <div class="card-meta">Observatoire de Genève · Prof. Vincent Bourrier · Dr. João Faria · Jun. 2026 – Present</div>
         <p>
-          Preparing two GAIA DR4 studies to detect and characterize the outer companions thought to
-          drive the high-eccentricity migration of close-in exo-Neptunes across the Desert, Ridge, and
-          Savanna. Work includes compiling a homogeneous catalogue of ~400 Neptunian systems, curating
-          radial velocity and imaging datasets to combine with GAIA astrometry, and building the analysis
-          tools to constrain companion masses, orbits, and 3D system architectures within the ATREIDES collaboration. 
+          Contributing to two ATREIDES studies that use Gaia DR4 epoch astrometry to characterize known
+          companions of exo-Neptunes and search for new ones, to test whether outer companions drove the
+          high-eccentricity migration that brought these planets into the Neptunian desert, ridge, and
+          savanna. I compiled a homogeneous catalog of stellar, planetary, and companion properties for
+          420 Neptune systems, cleaned all public and collaboration radial velocity data, and built tools
+          to jointly fit radial velocities and astrometry, which I tested on Hipparcos-Gaia proper motion
+          anomalies ahead of DR4. I am now developing statistical methods to test how spin-orbit angles
+          correlate with planet and companion properties.
         </p>
         <div class="tag-row">
           <span class="tag">Exoplanets</span>
@@ -47,17 +50,16 @@
       </div>
 
       <div class="project-card">
-        <h3>Distortions in the Stellar Surface</h3>
+        <h3>Stellar Tides in Transit Spectroscopy</h3>
         <div class="card-meta">Observatoire de Genève · Prof. Vincent Bourrier · Dr. Adrien Deline · Jun. 2025 – Present</div>
         <p>
-          Updating the ANTARESS workflow (Bourrier et al. 2024) to process high-resolution
-          spectroscopy datasets. Work includes deriving a correction term for the stellar
-          surface radial velocity equation to account for oblateness and tidal bulging, and
-          modeling gravity darkening due to tides induced by a companion planet. Updating 
-          ANTARESS plotting routines to visualize the effects of stellar surface distortions 
-          due to tides induced by a companion planet. The goal of this project is to improve 
-          the accuracy of radial velocity measurements and enhance our understanding of stellar 
-          surface dynamics.
+          Extending ANTARESS (Bourrier et al. 2024), a public workflow for high-resolution transit
+          spectroscopy, to model host stars distorted by both rotation and the tides raised by a close-in
+          planet, starting with WASP-12. I built a tidal model based on Kaula (1964), transformed it into
+          the ANTARESS frame, and combined it with the rotational potential to solve for the stellar
+          surface at each orbital phase. From that surface I calculate local gravity, gravity darkening,
+          and limb darkening. I am now developing a numerical solver for the surface velocity field, since
+          a tidally distorted photosphere has no closed-form line-of-sight intersection.
         </p>
         <div class="tag-row">
           <span class="tag">Stellar Physics</span>
@@ -67,54 +69,41 @@
         </div>
       </div>
 
-
-      <div class="project-card">
-        <h3>TESS Search for Transiting Circumbinary Planets</h3>
-        <div class="card-meta">Tufts Dept. of Physics &amp; Astronomy · Prof. David Martin · Sept. 2024 – Present</div>
-        <p>
-          Modified the circumbinary planet search algorithm STANLEY (Martin et al. 2021)
-          to search TESS light curves for transiting planets. Repurposed the detrending
-          method for TESS cadence and employed linear interpolation on the period vs. theta
-          search grid, cutting compute time in half. Paper in prep for MNRAS (2026).
-        </p>
-        <div class="tag-row">
-          <span class="tag">TESS</span>
-          <span class="tag">Circumbinary Planets</span>
-          <span class="tag">Transit Photometry</span>
-          <a class="gh-link" href="https://github.com/TKleanthousT/stanley_cbp" target="_blank" rel="noopener">GitHub →</a>
-        </div>
-      </div>
-
     </div>
 
     <h2>Past Projects</h2>
     <div class="project-list">
 
       <div class="project-card">
-        <h3>Identifying high-z galaxies with contrastive learning</h3>
-        <div class="card-meta">Observatoire de Genève · Prof. Pascal Oesch · Romain Meyer · Feb. 2026 – Jul. 2026</div>
+        <h3>Identifying High-z Galaxies with Contrastive Learning</h3>
+        <div class="card-meta">Observatoire de Genève · Dr. Romain Meyer · Prof. Pascal Oesch · Feb. 2026 – Jul. 2026</div>
         <p>
-          Applied contrastive self-supervised learning to JWST NIRSpec/prism spectra from the FRESCO
-          survey to identify high-redshift galaxy candidates. A convolutional neural network is trained to learn 
-          spectral representations without redshift labels, whose embeddings are then clustered and compared to rare sources 
-          to find other rare candidates hidden in JWST archival data.
+          Adapted SimCLR (Chen et al. 2020) to 1D spectra and trained it on ~20,000 NIRSpec prism spectra
+          from the DAWN JWST Archive, after finding that FRESCO's NIRCam grism spectra covered too narrow a
+          wavelength range for the network to learn from. Without redshift labels, the network sorted
+          spectra by redshift by learning the Lyman and Balmer breaks, and redshifts estimated from its
+          clusters matched known values with R² = 0.855. It also picked out two candidate high-redshift
+          analogs of GN-z11. I traced an over-clustering of red sources to how I represented the data
+          rather than to the network itself.
         </p>
         <div class="tag-row">
           <span class="tag">Machine Learning</span>
-          <span class="tag">Galactic Physics</span>
+          <span class="tag">Galaxy Evolution</span>
           <span class="tag">Cosmology</span>
           <a class="gh-link" href="https://github.com/Chartman25/glq_mpia" target="_blank" rel="noopener">GitHub →</a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3>Modeling Circumstellar Disk Truncation in Binary Systems</h3>
-        <div class="card-meta">Observatoire de Genève · Prof. Julia Venturini · Arianna Nigioni · Sept. 2025 – Dec. 2025</div>
+        <h3>Disk Truncation in Binaries</h3>
+        <div class="card-meta">Observatoire de Genève · Arianna Nigioni · Prof. Julia Venturini · Sept. 2025 – Dec. 2025</div>
         <p>
-          Derived an numerical function mapping binary eccentricity, separation, disk viscosity,
-          and stellar masses to the truncation radii of protoplanetary disks. Analyzed planet
-          embryo evolution using the Bern Model (Emsenhuber et al. 2021), examining mass growth,
-          orbital migration, and pebble accretion under varying binary parameters.
+          Built a tool to compute circumprimary and circumsecondary truncation radii from binary
+          eccentricity, separation, mass ratio, and disk viscosity, using the fits of Manara et al. (2019).
+          I then grew planetary embryos with a binary-adapted version of the Bern Model (Emsenhuber et al.
+          2021) in truncated circumprimary disks at separations of 50 to 300 AU. Tighter binaries produced
+          smaller planets that accreted less gas and migrated more slowly, while at 300 AU planets formed
+          nearly as they would around a single star.
         </p>
         <div class="tag-row">
           <span class="tag">Planet Formation</span>
@@ -125,8 +114,26 @@
       </div>
 
       <div class="project-card">
-        <h3>Direct Dark Matter Detection — XENONnT</h3>
-        <div class="card-meta">Weizmann Institute of Science · Ran Budnik's Lab · Jun. 2023 – Aug. 2023</div>
+        <h3>TESS Search for Transiting Circumbinary Planets</h3>
+        <div class="card-meta">Tufts Dept. of Physics &amp; Astronomy · Prof. David Martin · Sept. 2024 – Sept. 2025</div>
+        <p>
+          Adapted STANLEY (Martin et al. 2021) to search TESS eclipsing binaries for circumbinary (P-type)
+          planets. I tested detrending methods on short-cadence, high-variability TESS light curves to find
+          which removed systematics while preserving transits, validated the pipeline by recovering
+          TOI-1338b, and added linear interpolation to the period vs. θ search grid, cutting compute time
+          in half.
+        </p>
+        <div class="tag-row">
+          <span class="tag">TESS</span>
+          <span class="tag">Circumbinary Planets</span>
+          <span class="tag">Transit Photometry</span>
+          <a class="gh-link" href="https://github.com/TKleanthousT/stanley_cbp" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Direct Dark Matter Detection: XENONnT</h3>
+        <div class="card-meta">Weizmann Institute of Science · Prof. Ran Budnik · Jun. 2023 – Aug. 2023</div>
         <p>
           Worked within the XENONnT international collaboration on direct dark matter detection.
           Calibrated a neutron generator and designed an experiment to characterize its flux at
@@ -137,7 +144,6 @@
           <span class="tag">Dark Matter</span>
           <span class="tag">Particle Physics</span>
           <span class="tag">XENONnT</span>
-          <a class="gh-link" href="https://github.com/Chartman25" target="_blank" rel="noopener">GitHub →</a>
         </div>
       </div>
 
